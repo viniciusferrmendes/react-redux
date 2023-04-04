@@ -1,3 +1,11 @@
+import React from "react";
 import ReactDOM from "react-dom";
 
-ReactDOM.render("Hello World", document.getElementById("root"));
+const tag = <strong>Hello World</strong>;
+
+ReactDOM.render(
+    <div>
+        {tag}
+    </div>,
+    document.getElementById("root")
+);

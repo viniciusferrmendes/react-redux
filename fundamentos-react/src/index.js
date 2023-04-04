@@ -9,7 +9,7 @@ import "./index.css";
 ReactDOM.render(
     <div>
         <First />
-        <WithParameter course="React/Redux" student="Vinicius" grade={4} />
+        <WithParameter course="React/Redux" student="Vinicius" grade={6.7} />
     </div>,
     document.getElementById("root")
 );

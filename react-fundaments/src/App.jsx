@@ -14,19 +14,19 @@ export default () => {
             <h1>React Fundaments</h1>
 
             <div className="Cards">
-                <Card title="#04 - Random Challenge">
+                <Card title="#04 - Random Challenge" color="#C2492F">
                     <Random max={100} min={0} />
                 </Card>
 
-                <Card title="#03 - Fragment">
+                <Card title="#03 - Fragment" color="#3FC22F">
                     <Fragment />
                 </Card>
 
-                <Card title="#02 - With Parameter">
+                <Card title="#02 - With Parameter" color="#1572B2">
                     <WithParameter course="React/Redux" student="Vinicius" grade={6.7} />
                 </Card>
 
-                <Card title="#01 - First">
+                <Card title="#01 - First" color="#8215B2">
                     <First />
                 </Card>
             </div>

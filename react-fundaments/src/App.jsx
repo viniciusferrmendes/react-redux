@@ -7,6 +7,7 @@ import Random from "./components/basics/Random";
 import Card from "./components/Layout/Card/Card";
 import Family from "./components/basics/Family";
 import FamilyMember from "./components/basics/FamilyMember";
+import StudentsList from "./components/repetition/StudentsList";
 
 import "./App.css";
 
@@ -16,11 +17,15 @@ export default () => {
             <h1>React Fundaments</h1>
 
             <div className="Cards">
+                <Card title="#06 - Repetition" color="#F4B886">
+                    <StudentsList />
+                </Card>
                 <Card title="#05 - Component with chidrens" color="#08B2E3">
                     <Family surname="Mendes">
                         <FamilyMember name="Vinicius" />
                         <FamilyMember name="Joao Vitor" />
                         <FamilyMember name="Gilson" />
+                        <FamilyMember name="Lira" />
                     </Family>
                 </Card>
                 <Card title="#04 - Random Challenge" color="#C2492F">

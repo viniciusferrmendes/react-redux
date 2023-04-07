@@ -10,6 +10,7 @@ import FamilyMember from "./components/basics/FamilyMember";
 import StudentsList from "./components/repetition/StudentsList";
 import ProductsTable from "./components/repetition/ProductsTable";
 import EvenOrOdd from "./components/conditional/EvenOrOdd";
+import UserInfo from "./components/conditional/UserInfo";
 
 import "./App.css";
 
@@ -21,6 +22,9 @@ export default () => {
             <div className="Cards">
                 <Card title="#08 - Conditional Rendering" color="#846A6A">
                     <EvenOrOdd number={4} />
+                    <UserInfo/>
+                    <UserInfo user={{ name: "Vinicius" }} />
+                    <UserInfo user={{ name: "Pedro", email: "pedro@email.com" }} />
                 </Card>
                 <Card title="#07 - Products Table" color="#59656F">
                     <ProductsTable />

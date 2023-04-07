@@ -9,6 +9,7 @@ import Family from "./components/basics/Family";
 import FamilyMember from "./components/basics/FamilyMember";
 import StudentsList from "./components/repetition/StudentsList";
 import ProductsTable from "./components/repetition/ProductsTable";
+import EvenOrOdd from "./components/conditional/EvenOrOdd";
 
 import "./App.css";
 
@@ -18,6 +19,9 @@ export default () => {
             <h1>React Fundaments</h1>
 
             <div className="Cards">
+                <Card title="#08 - Conditional Rendering" color="#846A6A">
+                    <EvenOrOdd number={4} />
+                </Card>
                 <Card title="#07 - Products Table" color="#59656F">
                     <ProductsTable />
                 </Card>

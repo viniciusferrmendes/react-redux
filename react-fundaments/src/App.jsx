@@ -12,6 +12,7 @@ import ProductsTable from "./components/repetition/ProductsTable";
 import EvenOrOdd from "./components/conditional/EvenOrOdd";
 import UserInfo from "./components/conditional/UserInfo";
 import DirectFather from "./components/communication/DirectFather";
+import IndirectFather from "./components/communication/IndirectFather";
 
 import "./App.css";
 
@@ -21,7 +22,10 @@ export default () => {
             <h1>React Fundaments</h1>
 
             <div className="Cards">
-                <Card title="#09 - Direct Communication" color="#846A6A">
+                <Card title="#10 - Indirect Communication" color="#B5CBB7">
+                    <IndirectFather />
+                </Card>
+                <Card title="#09 - Direct Communication" color="#FFE900">
                     <DirectFather />
                 </Card>
                 <Card title="#08 - Conditional Rendering" color="#846A6A">

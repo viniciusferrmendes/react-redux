@@ -8,7 +8,7 @@ export default ({ callback }) => {
 
     return (
         <div>
-            <div>Filho</div>
+            <div>Son</div>
             <button onClick={() => callback("Gilson", randomAge(), randomDev())}>
                 Provide Informations
             </button>

@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 
+import Display from "./Display";
+import StepForm from "./StepForm";
+import Buttons from "./Buttons";
+
 import "./Counter.css";
 
 export default class Counter extends Component {
@@ -8,6 +12,12 @@ export default class Counter extends Component {
         number: this.props.initialValue || 0,
         step: this.props.step || 5,
     };
+
+    setStep = newStep => {
+        this.setState({
+            step: newStep
+        })
+    }
 
     increment = () => {
         this.setState({
@@ -21,23 +31,13 @@ export default class Counter extends Component {
         });
     }
 
-    setStep = e => {
-        this.setState({
-            step: + e.target.value
-        })
-    }
-
     render() {
         return (
             <div className="Counter">
                 <h2>Counter</h2>
-                <p>Initial value: {this.state.number}</p>
-                <div>
-                    <label htmlFor="stepInput">Step: </label>
-                    <input id="stepInput" type="number" value={this.state.step} onChange={this.setStep} />
-                </div>
-                <button onClick={this.increment}>+</button>
-                <button onClick={this.decrement}>-</button>
+                <Display number={this.state.number} />
+                <StepForm step={this.state.step} setStep={this.setStep} />
+                <Buttons setIncrement={this.increment} setDecrement={this.decrement} />
             </div>
         );
     }

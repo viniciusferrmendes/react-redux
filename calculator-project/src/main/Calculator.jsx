@@ -1,5 +1,6 @@
 import React from "react";
 
+import Display from "../components/Display/Display";
 import Button from "../components/Button/Button";
 
 import "./Calculator.css";
@@ -7,6 +8,7 @@ import "./Calculator.css";
 export default props => {
     return (
         <div className="calculator">
+            <Display value={100} />
             <Button label="AC" />
             <Button label="/" />
             <Button label="7" />

@@ -4,7 +4,7 @@ import "./Mega.css";
 
 export default props => {
 
-    const [quantity, setQuantity] = useState(props.quantity);
+    const [quantity, setQuantity] = useState(props.quantity || 6);
     const initialNumbers = getNumbers(quantity);
     const [numbers, setNumbers] = useState(initialNumbers);
 

@@ -1,9 +1,12 @@
 import React from "react";
 
+import Calculator from "./main/Calculator";
+
 export default () => {
   return (
-    <div className="App">
-      <h1>CALCULATOR PROJECT</h1>
+    <div>
+      <h1>Calculator</h1>
+      <Calculator />
     </div>
   );
 }

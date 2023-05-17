@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Menu.css";
 
@@ -8,10 +9,10 @@ export default props => {
             <nav>
                 <ul>
                     <li>
-                        <a href="/">Home</a>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <a href="/">About</a>
+                        <Link to="/about">About</Link>
                     </li>
                 </ul>
             </nav>

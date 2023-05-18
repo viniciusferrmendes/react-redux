@@ -4,13 +4,11 @@ import SectionTitle from "../../components/layout/SectionTitle";
 
 export default props => {
     const [count, setCount] = useState(0);
+    const [name, setName] = useState("");
 
     return (
         <div className="UseState">
-            <PageTitle
-                title="Hook UseState"
-                subtitle="Estado em componentes funcionais!"
-            />
+            <PageTitle title="Hook UseState" subtitle="Estado em componentes funcionais!" />
 
             <SectionTitle title="Exercise #01" />
             <div className="center">
@@ -23,6 +21,8 @@ export default props => {
             </div>
 
             <SectionTitle title="Exercise #02" />
+            <input type="text" className="input" value={name} onChange={e => setName(e.target.value)} />
+            <span className="text">{name}</span>
         </div>
     );
 }

@@ -1,26 +1,10 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import PageTitle from '../../components/layout/PageTitle';
-import { useReducer } from 'react';
 
-const initialState = {
-    cart: [],
-    products: [],
-    user: null,
-    number: 0
-};
+import { initialState, reducer } from "../../store";
+import { numberAdd2, login } from "../../store/actions"
 
-function reducer(state, action) {
-    switch (action.type) {
-        case "number_add2":
-            return { ...state, number: state.number + 2 }
-        case "login":
-            return { ...state, user: { name: action.payload } }
-        default:
-            return state;
-    }
-}
-
-const UseReducer = (props) => {
+const UseReducer = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     return (
@@ -37,8 +21,13 @@ const UseReducer = (props) => {
                 }
                 <span className="text">{state.number}</span>
                 <div>
-                    <button className="btn" onClick={() => dispatch({ type: "login", payload: "Vinicius" })}>Login</button>
-                    <button className="btn" onClick={() => dispatch({ type: "number_add2" })}>+2</button>
+                    <button className="btn" onClick={() => login(dispatch, "Vinicius")}>Login</button>
+                    <button className="btn" onClick={() => numberAdd2(dispatch)}>+2</button>
+                    <button className="btn" onClick={() => dispatch({ type: "numberMult7" })}>*7</button>
+                    <button className="btn" onClick={() => dispatch({ type: "numberDiv25" })}>/25</button>
+                    <button className="btn" onClick={() => dispatch({ type: "numberParseInt" })}>Parse to Int</button>
+                    <button className="btn" onClick={() => dispatch({ type: "numberAddN", payload: -9 })}>-9</button>
+                    <button className="btn" onClick={() => dispatch({ type: "numberAddN", payload: +11 })}>+11</button>
                 </div>
             </div>
         </div>
